@@ -1,0 +1,51 @@
+---
+title: "Day_2_Comp_1"
+---
+
+## Derivatives in R
+
+Console can be used to install packages, if you want to see if a function will run, using R as a calculator, anything you don't want the history of something.
+
+Everything we need to do this already exists within the R package.
+
+We will use the capital d function (D).
+
+First, we will make an expression for the derivative. Derivative needs the expression (contains our function) inputted with respect to the variable.
+
+```{r}
+fx <- expression(3.1 * (x^4) - 28 * x)
+
+#Now storing derivative expression.
+
+df_dx <- D(fx, 'x')
+
+#This will call it back. 
+df_dx
+
+x <- 10
+
+#eval evaluating the derivative at the x value that we gave it. 
+
+eval(df_dx)
+```
+
+Try finding the slope of g(z) = 2z^3^ -10.5z\^2 + 4.1 at z= 3.6
+
+```{r}
+#making the expression. 
+gz <- expression (2*z^3 - 10.5*z^2 +4.1)
+
+#finding the derivative, and the variable to which you want to take the derivative with respect to. 
+
+dg_dz <- D(gz, 'z')
+
+
+#setting z to 3.6 
+z<- seq(from =1, to= 3, length =20)
+
+eval(dg_dz)
+
+#running entire chunk, control shift enter!
+
+#what if we wanted to find the slope of the function over a sequence of values. you can easily vectorize to get a slope of multiple values. 
+```
