@@ -48,6 +48,8 @@ eval(dg_dz)
 #running entire chunk, control shift enter!
 
 #what if we wanted to find the slope of the function over a sequence of values. you can easily vectorize to get a slope of multiple values. 
+
+#rendering 
 ```
 
 Testing a change in this doc.
